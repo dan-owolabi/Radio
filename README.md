@@ -5,11 +5,16 @@ A beautiful, retro-styled radio application built with React, TypeScript, and Ta
 ## Features
 
 Multi-band support (FM, MW, SW, LW)
+
 Interactive tuning dial with smooth animations
+
 Station presets with live streaming
+
 Tempo control with playback rate adjustment
 Volume control with rotary knob
+
 Responsive design for mobile and desktop
+
 Beautiful dark theme with LCD display
 
 ## Getting Started
