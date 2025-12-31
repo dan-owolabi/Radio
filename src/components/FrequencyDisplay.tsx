@@ -1,7 +1,7 @@
+import { useState, useEffect } from 'react'
 import type { RadioBand } from '../data/stationData'
 
 interface FrequencyDisplayProps {
-  time?: string
   frequency: string
   unit?: string
   band?: RadioBand
@@ -14,7 +14,6 @@ interface FrequencyDisplayProps {
 }
 
 export default function FrequencyDisplay({
-  time = '9:00',
   frequency = '92.9',
   unit = 'MHz',
   band = 'FM',
@@ -25,6 +24,22 @@ export default function FrequencyDisplay({
   hasError = false,
   isPoweredOn = true,
 }: FrequencyDisplayProps) {
+  // Real-time clock
+  const [currentTime, setCurrentTime] = useState(() => {
+    const now = new Date()
+    return `${now.getHours()}:${now.getMinutes().toString().padStart(2, '0')}`
+  })
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date()
+      setCurrentTime(`${now.getHours()}:${now.getMinutes().toString().padStart(2, '0')}`)
+    }
+
+    const interval = setInterval(updateTime, 1000)
+    return () => clearInterval(interval)
+  }, [])
+
   // Determine status indicator
   const getStatusIndicator = () => {
     if (isLoading) {
@@ -51,7 +66,7 @@ export default function FrequencyDisplay({
         <div className="flex items-center justify-between px-4 py-3 max-md:py-2 relative z-20">
           <div className="flex items-center gap-2">
             <div className="text-[12px] font-medium text-black/60 font-dseg">
-              {time}
+              {currentTime}
             </div>
             <div className="bg-black px-1.5 py-0.5 rounded text-[11px] font-bold text-white">
               {band}
