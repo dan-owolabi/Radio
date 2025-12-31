@@ -90,7 +90,7 @@ function App() {
     <RotateDeviceOverlay>
       <AppShell>
         {/* Left Panel - Independent Part */}
-        <div className="flex-[0.55] min-w-[700px] max-md:flex-[0.5] max-md:min-w-0 max-md:w-full max-md:min-h-0 flex flex-col bg-[#1E1E1E] rounded-l-[2.5rem] max-md:rounded-l-none max-md:rounded-t-[1.5rem] overflow-hidden border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+        <div className="flex-[0.55] min-w-[700px] max-md:flex-[0.6] max-md:min-w-0 max-md:w-full max-md:min-h-0 flex flex-col bg-[#1E1E1E] rounded-l-[2.5rem] max-md:rounded-l-none max-md:rounded-t-[1.5rem] overflow-hidden border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
           <div className="flex-1 flex flex-col p-6 pb-0">
             <FrequencyDisplay
               frequency={displayFrequency}
@@ -113,7 +113,7 @@ function App() {
         </div>
 
         {/* Right Panel Wrapper - Independent Path */}
-        <div className="flex-[0.45] min-w-[450px] max-md:flex-[0.5] max-md:min-w-0 max-md:w-full max-md:min-h-0 flex flex-col gap-[3px] font-geist">
+        <div className="flex-[0.45] min-w-[450px] max-md:flex-[0.4] max-md:min-w-0 max-md:w-full max-md:min-h-0 flex flex-col gap-[3px] font-geist">
           {/* Top Section - Selection Controls (Physical Part) */}
           <div className="flex-1 p-6 max-md:p-4 flex flex-col bg-[#1E1E1E] rounded-tr-[2.5rem] max-md:rounded-tr-none border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
             {/* Radio Type & Power Button */}
