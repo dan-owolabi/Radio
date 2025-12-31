@@ -181,7 +181,7 @@ function App() {
             </div>
 
             {/* Stations Section */}
-            <div className="mb-6">
+            <div className="mb-4">
               <div className="text-white text-[14px] font-medium mb-3">
                 Stations ({band})
               </div>
