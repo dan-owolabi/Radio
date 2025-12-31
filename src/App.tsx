@@ -115,7 +115,7 @@ function App() {
         {/* Right Panel Wrapper - Independent Path */}
         <div className="flex-[0.45] min-w-[450px] max-md:flex-1 max-md:min-w-0 max-md:w-full flex flex-col gap-[3px] font-geist">
           {/* Top Section - Selection Controls (Physical Part) */}
-          <div className="flex-1 p-6 max-md:p-4 flex flex-col bg-[#1E1E1E] rounded-tr-[2.5rem] max-md:rounded-tr-none border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+          <div className="flex-1 max-md:flex-none p-6 max-md:p-4 flex flex-col bg-[#1E1E1E] rounded-tr-[2.5rem] max-md:rounded-tr-none border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
             {/* Radio Type & Power Button */}
             <div className="flex items-start gap-3 mb-6">
               <div className="flex-1 flex items-center justify-between bg-transparent rounded-xl px-5 border-2 border-white/15 h-[52px]">
