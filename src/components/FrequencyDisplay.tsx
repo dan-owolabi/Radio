@@ -40,9 +40,9 @@ export default function FrequencyDisplay({
   }
 
   return (
-    <div className="bg-[#111111] rounded-3xl p-5 max-md:p-4 flex max-md:flex-col gap-8 max-md:gap-4 items-stretch border border-white/5 font-geist">
+    <div className="bg-[#111111] rounded-3xl p-5 max-md:p-3 flex max-md:flex-col gap-8 max-md:gap-3 items-stretch border border-white/5 font-geist">
       {/* LCD Display Block */}
-      <div className={`rounded-2xl flex flex-col w-[280px] h-[190px] max-md:w-full max-md:h-[140px] relative overflow-hidden shadow-[inset_0_4px_12px_rgba(0,0,0,0.6)] border border-black/40 transition-all duration-700
+      <div className={`rounded-2xl flex flex-col w-[280px] h-[190px] max-md:w-full max-md:h-[100px] relative overflow-hidden shadow-[inset_0_4px_12px_rgba(0,0,0,0.6)] border border-black/40 transition-all duration-700
         ${isPoweredOn ? 'bg-[#94a191]' : 'bg-[#1a1c1a]'}`}>
         {/* LCD Top Gradient Shadow */}
         <div className="absolute top-0 left-0 right-0 h-10 bg-gradient-to-b from-black/40 to-transparent pointer-events-none z-10"></div>
