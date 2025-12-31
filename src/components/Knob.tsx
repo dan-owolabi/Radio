@@ -146,7 +146,7 @@ export default function Knob({ value = 50, onChange, size = 64, step = 5 }: Knob
         ref={knobRef}
         onMouseDown={handleMouseDown}
         onTouchStart={handleTouchStart}
-        className="relative flex items-center justify-center cursor-grab active:cursor-grabbing group"
+        className="relative flex items-center justify-center cursor-grab active:cursor-grabbing group touch-none"
         style={{ width: size, height: size }}
       >
         {/* Outer Well (Recessed Well) */}
