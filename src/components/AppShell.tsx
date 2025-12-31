@@ -40,14 +40,14 @@ export default function AppShell({ children }: AppShellProps) {
 
   return (
     <div
-      className="bg-black w-full h-full flex items-center max-md:items-start justify-center p-0 max-md:p-2 font-geist max-md:overflow-y-auto"
+      className="bg-black w-full h-full max-md:h-screen max-md:max-h-screen flex items-center max-md:items-stretch justify-center p-0 max-md:p-2 font-geist max-md:overflow-hidden"
       style={{
         transform: scale !== 1 ? `scale(${scale})` : undefined,
         transformOrigin: 'center center',
       }}
     >
       <div
-        className="flex flex-row max-md:flex-col gap-[3px] max-md:w-full"
+        className="flex flex-row max-md:flex-col gap-[3px] max-md:w-full max-md:h-full max-md:max-h-full"
         style={{
           width: '1300px',
           maxWidth: '98vw',
