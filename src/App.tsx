@@ -202,7 +202,7 @@ function App() {
           </div>
 
           {/* Bottom Section - Tuning Controls (Physical Part) */}
-          <div className="p-6 max-md:p-4 flex flex-col bg-[#1E1E1E] rounded-br-[2.5rem] max-md:rounded-br-none max-md:rounded-b-[2rem] border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+          <div className="p-6 max-md:p-4 flex flex-col bg-[#1E1E1E] rounded-br-[2.5rem] max-md:rounded-b-[1.5rem] border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
             <div className="text-white text-[14px] font-medium mb-2 flex items-center gap-2">
               Tempo
               {isTempoLocked() && (

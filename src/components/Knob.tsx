@@ -65,6 +65,7 @@ export default function Knob({ value = 50, onChange, size = 64, step = 5 }: Knob
 
   // Touch events
   const handleTouchStart = (e: React.TouchEvent) => {
+    e.preventDefault() // Prevent scroll and other default behaviors
     if (e.touches.length === 1) {
       handleDragStart(e.touches[0].clientY)
     }
@@ -75,6 +76,7 @@ export default function Knob({ value = 50, onChange, size = 64, step = 5 }: Knob
     const handleMouseMove = (e: MouseEvent) => handleDragMove(e.clientY)
     const handleMouseUp = () => handleDragEnd()
     const handleTouchMove = (e: TouchEvent) => {
+      e.preventDefault() // Prevent scrolling while dragging
       if (e.touches.length === 1) {
         handleDragMove(e.touches[0].clientY)
       }
@@ -84,7 +86,7 @@ export default function Knob({ value = 50, onChange, size = 64, step = 5 }: Knob
     if (isDragging) {
       window.addEventListener('mousemove', handleMouseMove)
       window.addEventListener('mouseup', handleMouseUp)
-      window.addEventListener('touchmove', handleTouchMove)
+      window.addEventListener('touchmove', handleTouchMove, { passive: false })
       window.addEventListener('touchend', handleTouchEnd)
     }
 
@@ -146,7 +148,7 @@ export default function Knob({ value = 50, onChange, size = 64, step = 5 }: Knob
         ref={knobRef}
         onMouseDown={handleMouseDown}
         onTouchStart={handleTouchStart}
-        className="relative flex items-center justify-center cursor-grab active:cursor-grabbing group touch-none"
+        className="relative flex items-center justify-center cursor-grab active:cursor-grabbing group touch-manipulation"
         style={{ width: size, height: size }}
       >
         {/* Outer Well (Recessed Well) */}
